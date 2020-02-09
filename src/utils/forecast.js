@@ -10,7 +10,7 @@ const forecast = (longitude, latitude, callback) => {
 
       callback(
         undefined,
-        `${data.daily.data[0].summary} It's currently ${data.currently.temperature} degrees out. There's a ${data.currently.precipProbability}% chance of rain.`
+        `${data.daily.data[0].summary} It's currently ${data.currently.temperature} degrees out, with a high of ${data.daily.data[0].temperatureHigh} and low of ${data.daily.data[0].temperatureLow}. There's a ${data.currently.precipProbability}% chance of rain.`
       )
     })
     .catch(error => {
